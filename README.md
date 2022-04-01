@@ -7,9 +7,8 @@ Status: Work in progress, vite not added yet
 After launching the project, run these steps in the Gitpod terminal to create the initial config:
 
 ```bash
-cd ddev-breeze-inertia-vue-starter/ && \
+cd experimental-inertia-svelte-vite/ && \
     ddev start && \
-    ddev composer install && \
     ddev exec "cat .env.example | sed  -E 's/DB_(HOST|DATABASE|USERNAME|PASSWORD)=(.*)/DB_\1=db/g' > .env" && \
     ddev artisan key:generate && \
     ddev artisan migrate && \

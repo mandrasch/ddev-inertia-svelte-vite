@@ -27,6 +27,7 @@ Start dev server via `ddev exec npm run dev` --> doesn't work currently.
 
 ![Screenshot error message](.screenshots/error1.png)
 ![Screenshot error message](.screenshots/error2.png)
+![Screenshot error message](.screenshots/error3.png)
 
 _(You can as well use this repo locally via DDEV-local, https://ddev.readthedocs.io/en/stable/)_
 

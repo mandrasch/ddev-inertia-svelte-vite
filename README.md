@@ -1,3 +1,23 @@
+Status: Work in progress, vite not added yet
+
+## Launch via Gitpod
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#DDEV_REPO=https%3A%2F%2Fgithub.com%2Fmandrasch%2Fexperimental-inertia-svelte-vite,DDEV_ARTIFACTS=/https://github.com/drud/ddev-gitpod-launcher/)
+
+After launching the project, run these steps in the Gitpod terminal to create the initial config:
+
+```bash
+cd ddev-breeze-inertia-vue-starter/ && \
+    ddev start && \
+    ddev composer install && \
+    ddev exec "cat .env.example | sed  -E 's/DB_(HOST|DATABASE|USERNAME|PASSWORD)=(.*)/DB_\1=db/g' > .env" && \
+    ddev artisan key:generate && \
+    ddev artisan migrate && \
+    ddev exec npm install && \
+    ddev exec npm run dev && \
+    gp preview $(gp url 8080)
+```
+
 ## How was this created?
 
 **DDEV Laravel Composer Quickstart**
@@ -90,3 +110,18 @@ Create a page, e.g. `resources/js/Pages/Welcome.svelte`
 <p>Hello {user}, welcome to your first Inertia app!</p>
 
 ```
+
+Render it as index page via `routes/web.php`:
+
+```
+<?php
+
+use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
+
+Route::get('/', function () {
+    return Inertia::render("Welcome");
+});
+```
+
+Launch it in your browser via `ddev launch`.

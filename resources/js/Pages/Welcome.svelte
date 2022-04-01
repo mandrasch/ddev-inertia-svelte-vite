@@ -1,10 +1,12 @@
 <script>
-    let user = 'Svelte Testperson';
+    let user = "Svelte Testperson";
 </script>
 
-  <svelte:head>
-     <title>Welcome</title>
-  </svelte:head>
+<svelte:head>
+    <title>Welcome</title>
+</svelte:head>
 
-  <h1>Welcome</h1>
-  <p>Hello {user}, welcome to your first Inertia app!</p>
+<h1>Welcome</h1>
+<p>Hello {user}, welcome to your first Inertia app!</p>
+
+<p>Test 123</p>

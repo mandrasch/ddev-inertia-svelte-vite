@@ -1,4 +1,10 @@
-Status: Work in progress, vite not added yet
+Status: Work in progress
+
+-   Installed fresh inertia with svelte support
+-   Trying to add https://laravel-vite.dev/ via [Installation in an existing project](https://laravel-vite.dev/guide/quick-start.html#before-starting)
+-   Current state:
+    -   `ddev exec npm run build` -> works
+    -   `ddev exec npm run dev` -> doesn't work (routing to localhost:3000/ doesn't work)
 
 ## Launch via Gitpod
 
@@ -16,6 +22,8 @@ cd experimental-inertia-svelte-vite/ && \
     ddev exec npm run dev && \
     gp preview $(gp url 8080)
 ```
+
+(You can as well use this locally, just run `ddev launch` instead of `gp preview $(gp url 8080)`)
 
 ## How was this created?
 
@@ -124,3 +132,54 @@ Route::get('/', function () {
 ```
 
 Launch it in your browser via `ddev launch`.
+
+**Replacing Laravel Mix with Laravel vite:**
+
+https://laravel-vite.netlify.app/guide/quick-start.html#installation-in-an-existing-project
+
+```
+ddev exec "composer require innocenzi/laravel-vite:0.2.*"
+ddev exec npm i -D vite vite-plugin-laravel
+ddev exec npm install --save-dev @sveltejs/vite-plugin-svelte
+```
+
+Create `vite.config.ts`
+
+```javascript
+import { defineConfig } from "vite";
+import svelte from "@vitejs/plugin-svelte";
+import laravel from "vite-plugin-laravel";
+
+export default defineConfig({
+    plugins: [svelte(), laravel()],
+});
+```
+
+```
+ddev artisan vendor:publish --tag=vite-config
+```
+
+TODO: do we use vite.php?
+
+Edit package.json:
+
+```json
+  "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+      },
+```
+
+```
+import '../css/app.css';
+
+import { createInertiaApp } from '@inertiajs/inertia-svelte'
+
+createInertiaApp({
+    resolve: async name => await import(`./Pages/${name}.svelte`),
+    setup({ el, App, props }) {
+        new App({ target: el, props })
+    },
+})
+```

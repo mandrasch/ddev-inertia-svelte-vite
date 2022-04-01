@@ -27,7 +27,7 @@ cd experimental-inertia-svelte-vite/ && \
 
 ## How was this created?
 
-**DDEV Laravel Composer Quickstart**
+### 1. DDEV Laravel Composer Quickstart
 
 ```
 mkdir my-laravel-app
@@ -42,7 +42,7 @@ ddev launch
 
 See: https://ddev.readthedocs.io/en/stable/users/cli-usage/#laravel-composer-setup-example
 
-**Inertia**
+### 2. Inertia installation
 
 ```
 ddev composer require inertiajs/inertia-laravel
@@ -133,9 +133,9 @@ Route::get('/', function () {
 
 Launch it in your browser via `ddev launch`.
 
-**Replacing Laravel Mix with Laravel vite:**
+### 3. Trying to replace Laravel Mix with Laravel vite
 
-https://laravel-vite.netlify.app/guide/quick-start.html#installation-in-an-existing-project
+Docs: https://laravel-vite.netlify.app/guide/quick-start.html#installation-in-an-existing-project
 
 ```
 ddev exec "composer require innocenzi/laravel-vite:0.2.*"
@@ -143,7 +143,7 @@ ddev exec npm i -D vite vite-plugin-laravel
 ddev exec npm install --save-dev @sveltejs/vite-plugin-svelte
 ```
 
-Create `vite.config.ts`
+Create `vite.config.ts`:
 
 ```javascript
 import { defineConfig } from "vite";
@@ -155,13 +155,15 @@ export default defineConfig({
 });
 ```
 
+Add vite config (PHP):
+
 ```
 ddev artisan vendor:publish --tag=vite-config
 ```
 
-TODO: do we use vite.php?
+TODO: do we need this?
 
-Edit package.json:
+Edit `package.json` for vite scripts:
 
 ```json
   "scripts": {
@@ -170,6 +172,8 @@ Edit package.json:
         "preview": "vite preview"
       },
 ```
+
+Change `resources/js/app.js` file, use import instead of require:
 
 ```
 import '../css/app.css';
@@ -183,3 +187,5 @@ createInertiaApp({
     },
 })
 ```
+
+TODO: is this the correct/reliable way?

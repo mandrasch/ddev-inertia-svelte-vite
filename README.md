@@ -4,7 +4,7 @@ Status: Work in progress
 -   Trying to add https://laravel-vite.dev/ via [Installation in an existing project](https://laravel-vite.dev/guide/quick-start.html#before-starting)
 -   Current state:
     -   `ddev exec npm run build` -> works
-    -   `ddev exec npm run dev` -> doesn't work (routing to localhost:3000/ doesn't work)
+    -   `ddev exec npm run dev` -> doesn't work (routing to localhost:3000/ doesn't work, see screenshots below)
 
 ## Launch via Gitpod
 
@@ -19,11 +19,16 @@ cd experimental-inertia-svelte-vite/ && \
     ddev artisan key:generate && \
     ddev artisan migrate && \
     ddev exec npm install && \
-    ddev exec npm run dev && \
+    ddev exec npm run build && \
     gp preview $(gp url 8080)
 ```
 
-(You can as well use this locally, just run `ddev launch` instead of `gp preview $(gp url 8080)`)
+Start dev server via `ddev exec npm run dev` --> doesn't work currently.
+
+![Screenshot error message](.screenshots/error1.png)
+![Screenshot error message](.screenshots/error2.png)
+
+_(You can as well use this repo locally via DDEV-local, https://ddev.readthedocs.io/en/stable/)_
 
 ## How was this created?
 

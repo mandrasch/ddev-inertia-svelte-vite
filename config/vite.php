@@ -22,10 +22,10 @@ return [
             ],
             'dev_server' => [
                 'enabled' => true,
-                'url' => env('APP_URL').":3000", // important
-                'ping_before_using_manifest' => true,
+                'url' => env('APP_URL').":3000/dist/", // important !
+                'ping_before_using_manifest' => false, // important change - why does it work with false?
                 'ping_url' => null,
-                'ping_timeout' => 1,
+                'ping_timeout' => null, // important --> https://github.com/innocenzi/laravel-vite/issues/74#issuecomment-981099689
                 'key' => env('DEV_SERVER_KEY'),
                 'cert' => env('DEV_SERVER_CERT'),
             ],

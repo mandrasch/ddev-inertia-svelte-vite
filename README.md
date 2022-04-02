@@ -15,6 +15,7 @@ Current errors:
 
 - DDEV Discord thread https://discord.com/channels/664580571770388500/959490250474938489
 - There is a working example for standalone PHP usage in combination with vite 2.6.4 https://github.com/iammati/vite-ddev, therefore it seems to be a configuration issue with Laravel Vite 🤔
+- Is this related to this? https://github.com/innocenzi/laravel-vite/issues/74#issuecomment-981099689
 
 ## Launch via Gitpod
 

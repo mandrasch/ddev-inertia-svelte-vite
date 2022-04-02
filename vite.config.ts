@@ -31,7 +31,7 @@ export default defineConfig({
         sourcemap: true,
 
         rollupOptions: {
-            input: './resources/js/app.js',
+            input: './resources/js/app.ts',
         },
 
         watch: {

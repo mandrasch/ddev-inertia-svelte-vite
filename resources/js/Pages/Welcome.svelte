@@ -9,4 +9,4 @@
 <h1>Welcome</h1>
 <p>Hello {user}, welcome to your first Inertia app!</p>
 
-<p>Test 123</p>
+<p>Test 12345678</p>

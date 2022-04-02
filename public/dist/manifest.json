@@ -1,0 +1,18 @@
+{
+  "resources/js/app.js": {
+    "file": "assets/app.0d829da9.js",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/Pages/Welcome.svelte"
+    ]
+  },
+  "resources/js/Pages/Welcome.svelte": {
+    "file": "assets/Welcome.8d3c0164.js",
+    "src": "resources/js/Pages/Welcome.svelte",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  }
+}

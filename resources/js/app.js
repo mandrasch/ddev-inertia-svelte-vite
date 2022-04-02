@@ -9,3 +9,6 @@ createInertiaApp({
         new App({ target: el, props })
     },
 })
+
+// Test - watch doesn get triggered by vite?
+alert('hello vite 12345678910?!');

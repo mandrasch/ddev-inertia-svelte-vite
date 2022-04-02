@@ -6,6 +6,16 @@ Status: Work in progress
     -   `ddev exec npm run build` -> works
     -   `ddev exec npm run dev` -> doesn't work (routing to localhost:3000/ doesn't work, see screenshots below)
 
+Current errors: 
+
+![Screenshot error message](.screenshots/error1.png)
+![Screenshot error message](.screenshots/error2.png)
+![Screenshot error message](.screenshots/error3.png)
+
+
+- DDEV Discord thread https://discord.com/channels/664580571770388500/959490250474938489
+- There is a working example for standalone PHP usage in combination with vite https://github.com/iammati/vite-ddev, therefore it seems to be a configuration issue with Laravel Vite 🤔
+
 ## Launch via Gitpod
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#DDEV_REPO=https%3A%2F%2Fgithub.com%2Fmandrasch%2Fexperimental-inertia-svelte-vite,DDEV_ARTIFACTS=/https://github.com/drud/ddev-gitpod-launcher/)
@@ -22,12 +32,6 @@ cd experimental-inertia-svelte-vite/ && \
     ddev exec npm run build && \
     gp preview $(gp url 8080)
 ```
-
-Start dev server via `ddev exec npm run dev` --> doesn't work currently.
-
-![Screenshot error message](.screenshots/error1.png)
-![Screenshot error message](.screenshots/error2.png)
-![Screenshot error message](.screenshots/error3.png)
 
 _(You can as well use this repo locally via DDEV-local, https://ddev.readthedocs.io/en/stable/)_
 

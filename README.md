@@ -34,6 +34,10 @@ cd experimental-inertia-svelte-vite/ && \
     gp preview $(gp url 8080)
 ```
 
+Afterwards:
+
+`ddev exec npm run dev`
+
 _(You can as well use this repo locally via DDEV-local, https://ddev.readthedocs.io/en/stable/)_
 
 ## How was this created?

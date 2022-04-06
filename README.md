@@ -17,7 +17,7 @@ Current errors:
 - There is a working example for standalone PHP usage in combination with vite 2.6.4 https://github.com/iammati/vite-ddev, therefore it seems to be a configuration issue with Laravel Vite 🤔
 - Is this related to this? https://github.com/innocenzi/laravel-vite/issues/74#issuecomment-981099689
 
-## Launch via Gitpod
+## Launch via Gitpod - CURRENTLY BROKEN
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#DDEV_REPO=https%3A%2F%2Fgithub.com%2Fmandrasch%2Fexperimental-inertia-svelte-vite,DDEV_ARTIFACTS=/https://github.com/drud/ddev-gitpod-launcher/)
 
@@ -33,6 +33,10 @@ cd experimental-inertia-svelte-vite/ && \
     ddev exec npm run build && \
     gp preview $(gp url 8080)
 ```
+
+Afterwards:
+
+`ddev exec npm run dev`
 
 _(You can as well use this repo locally via DDEV-local, https://ddev.readthedocs.io/en/stable/)_
 

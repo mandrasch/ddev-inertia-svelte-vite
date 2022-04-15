@@ -2,7 +2,8 @@ Status: Work in progress
 
 -   Installed fresh inertia with svelte support
 -   Trying to add https://laravel-vite.dev/ via [Installation in an existing project](https://laravel-vite.dev/guide/quick-start.html#before-starting)
--   Current state:
+-   See: https://github.com/innocenzi/laravel-vite/discussions/233
+-    Current state:
     -   `ddev exec npm run build` -> works
     -   `ddev exec npm run dev` -> doesn't work (routing to localhost:3000/ doesn't work, see screenshots below)
 
